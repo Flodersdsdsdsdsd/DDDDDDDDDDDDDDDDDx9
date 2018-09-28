@@ -13,22 +13,6 @@ client.on('ready', () => {
 });
 
 
-const adminprefix = "-";
-const devs = ['286088294234718209'];
-
-client.on('message', message => {
-if(message.content === adminprefix + "restart") {
-      if (!devs.includes(message.author.id)) return;
-          message.channel.send(`⚠️ **الشخص الذي اعاد تشغيل البوت ${message.author.username}**`);
-        console.log(`⚠️ جاري اعادة تشغيل البوت... ⚠️`);
-        client.destroy();
-        child_process.fork(__dirname + "/bot.js");
-        console.log(`تم اعادة تشغيل البوت`);
-    }
-  
-  }); // By Kahrba
-
-
 
 
 client.on('message', message => {
