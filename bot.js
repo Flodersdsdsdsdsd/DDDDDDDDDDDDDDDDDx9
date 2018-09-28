@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = ['-'];
+const prefix = ['-']
 
 client.on('ready', () => {
   console.log('======================================')
@@ -11,6 +11,8 @@ client.on('ready', () => {
   console.log(`Users! [ " ${client.users.size} " ]`);
   console.log('=======================================')
 });
+
+
 
 
 
@@ -80,6 +82,8 @@ client.on('guildCreate', (guild) => {
         guild.leave();
     }
 })
+
+
 
 
 client.login(process.env.TOKEN);
